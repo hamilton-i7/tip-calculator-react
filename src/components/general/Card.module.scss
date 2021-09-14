@@ -1,0 +1,12 @@
+@import '../../scss/variables';
+
+$border-radius: 2.5rem;
+
+.card {
+  background-color: $neutral-color-6;
+  border-top-left-radius: $border-radius;
+  border-top-right-radius: $border-radius;
+  padding: 3.2rem;
+  max-width: 92rem;
+  width: 100%;
+}

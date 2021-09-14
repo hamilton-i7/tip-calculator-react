@@ -1,0 +1,29 @@
+@import '../../scss/variables';
+
+.btn {
+  border: none;
+  border-radius: 0.5rem;
+  outline: none;
+  padding: 0.6rem 1.8rem;
+
+  &--primary {
+    @extend .btn;
+
+    background-color: $neutral-color-1;
+    color: $neutral-color-6;
+  }
+
+  &--primary-variant {
+    @extend .btn;
+
+    background-color: $primary-color-1;
+    color: $neutral-color-1;
+  }
+
+  &--neutral {
+    @extend .btn;
+
+    background-color: $neutral-color-5;
+    color: $neutral-color-2;
+  }
+}

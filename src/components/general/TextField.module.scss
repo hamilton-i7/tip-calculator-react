@@ -1,0 +1,24 @@
+@import '../../scss/variables';
+
+.textfield {
+  background-color: $neutral-color-5;
+  border: none;
+  border-radius: 0.5rem;
+  color: $neutral-color-1;
+  outline: none;
+  padding: 0.6rem 1.8rem;
+  padding-left: 5rem;
+  width: 100%;
+
+  &__container {
+    position: relative;
+    margin-bottom: 3.2rem;
+  }
+
+  &__icon {
+    left: 1.8rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

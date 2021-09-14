@@ -1,0 +1,19 @@
+@import '../../scss/variables';
+
+.controls {
+  &__label {
+    color: $neutral-color-2;
+    display: block;
+    margin-bottom: 0.6rem;
+  }
+}
+
+.tip-percentages {
+  &__container {
+    display: grid;
+    gap: 1.6rem;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 1.6rem;
+    margin-bottom: 3.2rem;
+  }
+}

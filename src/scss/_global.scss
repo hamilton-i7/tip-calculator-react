@@ -12,6 +12,10 @@ body {
   align-items: center;
   background-color: $neutral-color-4;
   box-sizing: border-box;
+}
+
+main {
+  align-items: center;
   display: flex;
   flex-direction: column;
 }
