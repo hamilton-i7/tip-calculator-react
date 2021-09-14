@@ -1,11 +1,13 @@
 @import '../../scss/variables';
 
 $border-radius: 2.5rem;
+$shadow-color: rgba($neutral-color-1, 0.2);
 
 .card {
   background-color: $neutral-color-6;
   border-top-left-radius: $border-radius;
   border-top-right-radius: $border-radius;
+  box-shadow: 1.5rem 0 3rem $shadow-color;
   padding: 3.2rem;
   max-width: 92rem;
   width: 100%;
