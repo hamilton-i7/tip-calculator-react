@@ -1,6 +1,13 @@
 @import '../../scss/variables';
+@import '../../scss/mixins';
 
 .controls {
+  &__container {
+    @include lgMinBreakPoint {
+      flex: 1;
+      margin-right: 4.8rem;
+    }
+  }
   &__label {
     color: $neutral-color-2;
     display: block;
@@ -15,5 +22,9 @@
     grid-template-columns: repeat(2, 1fr);
     margin-top: 1.6rem;
     margin-bottom: 3.2rem;
+
+    @include mdMinBreakPoint {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 }

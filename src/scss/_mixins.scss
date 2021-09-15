@@ -1,0 +1,56 @@
+// Screen sizes
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+$screen-xxl: 1300px;
+$screen-full: 1400px;
+
+// Breakpoints
+@mixin smMinBreakPoint {
+  @media (min-width: #{$screen-sm}) {
+    @content;
+  }
+}
+
+@mixin mdMinBreakPoint {
+  @media (min-width: #{$screen-md}) {
+    @content;
+  }
+}
+
+@mixin lgMinBreakPoint {
+  @media (min-width: #{$screen-lg}) {
+    @content;
+  }
+}
+
+@mixin xlMinBreakPoint {
+  @media (min-width: #{$screen-xl}) {
+    @content;
+  }
+}
+
+@mixin xxlMinBreakPoint {
+  @media (min-width: #{$screen-xxl}) {
+    @content;
+  }
+}
+
+@mixin customMinWidthAndHeight($width, $height) {
+  @media (min-width: $width) and (min-height: $height) {
+    @content;
+  }
+}
+
+@mixin customMinHeightAndPortrait($size) {
+  @media (min-height: $size) and (orientation: portrait) {
+    @content;
+  }
+}
+
+@mixin customMinHeightAndLandscape($size) {
+  @media (min-height: $size) and (orientation: landscape) {
+    @content;
+  }
+}

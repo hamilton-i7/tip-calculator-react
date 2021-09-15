@@ -1,5 +1,11 @@
+@import '../../scss/mixins';
+
 .logo {
   display: block;
   margin: 5rem auto 4rem auto;
   width: 8.6rem;
+
+  @include customMinWidthAndHeight(992px, 884px) {
+    margin: 16.3rem auto 8.7rem auto;
+  }
 }

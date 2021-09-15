@@ -1,4 +1,5 @@
 @import '../../scss/variables';
+@import '../../scss/mixins';
 
 $border-radius: 2.5rem;
 $shadow-color: rgba($neutral-color-1, 0.2);
@@ -11,4 +12,12 @@ $shadow-color: rgba($neutral-color-1, 0.2);
   padding: 3.2rem;
   max-width: 92rem;
   width: 100%;
+
+  @include customMinHeightAndPortrait(922px) {
+    border-radius: $border-radius;
+  }
+
+  @include customMinHeightAndLandscape(610px) {
+    border-radius: $border-radius;
+  }
 }

@@ -1,10 +1,10 @@
 import styles from './Button.module.scss';
 import * as Constants from '../../utils/constants';
 
-function Button({ variant, text, className = '', type = 'button' }) {
+function Button({ variant, text, className = '', type = 'button', onClick }) {
   const classes = `${getButtonVariant(variant)} ${className}`;
   return (
-    <button type={type} className={classes}>
+    <button type={type} className={classes} onClick={onClick}>
       {text}
     </button>
   );
@@ -13,9 +13,6 @@ function Button({ variant, text, className = '', type = 'button' }) {
 function getButtonVariant(variant) {
   let buttonVariant;
   switch (variant) {
-    case Constants.NEUTRAL:
-      buttonVariant = styles['btn--neutral'];
-      break;
     case Constants.PRIMARY:
       buttonVariant = styles['btn--primary'];
       break;

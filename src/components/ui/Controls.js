@@ -5,26 +5,64 @@ import dollarSignIcon from '../../images/icon-dollar.svg';
 import personIcon from '../../images/icon-person.svg';
 import * as Constants from '../../utils/constants';
 
-function Controls() {
+function Controls({
+  bill,
+  onBillChange,
+  peopleAmount,
+  onPeopleAmountChange,
+  tipButtons,
+  onTipButtonClick,
+  selectedTipButtonID,
+  customPercentage,
+  onCustomPercentageChange,
+}) {
   return (
     <section className={styles['controls__container']}>
       <label htmlFor="bill" className={styles['controls__label']}>
         Bill
       </label>
-      <TextField id="bill" iconSrc={dollarSignIcon} step="0.01" />
-      <label className={styles['controls__label']}>Select Tip %</label>
+      <TextField
+        id="bill"
+        iconSrc={dollarSignIcon}
+        step="0.01"
+        placeholder="0"
+        value={bill}
+        onChange={onBillChange}
+      />
+      <label className={styles['controls__label']} htmlFor="custom">
+        Select Tip %
+      </label>
       <div className={styles['tip-percentages__container']}>
-        <Button text="5%" variant={Constants.PRIMARY} />
-        <Button text="10%" variant={Constants.PRIMARY} />
-        <Button text="15%" variant={Constants.PRIMARY} />
-        <Button text="25%" variant={Constants.PRIMARY} />
-        <Button text="50%" variant={Constants.PRIMARY} />
-        <Button text="Custom" variant={Constants.NEUTRAL} />
+        {tipButtons.map(button => (
+          <Button
+            key={button.id}
+            text={button.percentage * 100 + '%'}
+            variant={
+              button.id === selectedTipButtonID
+                ? Constants.PRIMARY_VARIANT
+                : Constants.PRIMARY
+            }
+            onClick={() => onTipButtonClick(button)}
+          />
+        ))}
+        <TextField
+          id="custom"
+          placeholder="Custom"
+          lightPlaceholder={false}
+          value={customPercentage}
+          onChange={onCustomPercentageChange}
+        />
       </div>
       <label htmlFor="people-amount" className={styles['controls__label']}>
         Number of People
       </label>
-      <TextField id="people-amount" iconSrc={personIcon} />
+      <TextField
+        id="people-amount"
+        iconSrc={personIcon}
+        placeholder="0"
+        value={peopleAmount}
+        onChange={onPeopleAmountChange}
+      />
     </section>
   );
 }
