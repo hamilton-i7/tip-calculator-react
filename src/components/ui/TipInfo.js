@@ -11,6 +11,10 @@ function TipInfo({ bill, percentage, peopleAmount, onReset }) {
   const total = isValid(+peopleAmount)
     ? calculateTotal(+bill, percentage, peopleAmount)
     : ZERO;
+  const dollarUS = Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+  });
   const buttonVariant = areFieldsEmpty(
     bill + '',
     percentage + '',
@@ -25,14 +29,16 @@ function TipInfo({ bill, percentage, peopleAmount, onReset }) {
           Tip Amount
           <span>/ person</span>
         </h2>
-        <p className={styles['amount-info__amount']}>${tip}</p>
+        <p className={styles['amount-info__amount']}>{dollarUS.format(tip)}</p>
       </div>
       <div className={styles['amount-info__container']}>
         <h2 className={styles['amount-info__title']}>
           Total
           <span>/ person</span>
         </h2>
-        <p className={styles['amount-info__amount']}>${total}</p>
+        <p className={styles['amount-info__amount']}>
+          {dollarUS.format(total)}
+        </p>
       </div>
       <Button
         text="RESET"

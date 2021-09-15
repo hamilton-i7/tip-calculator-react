@@ -56,6 +56,8 @@
     color: $primary-color-1;
     font-size: 3.2rem;
     font-weight: 900;
+    margin-left: 1.6rem;
+    overflow-x: auto;
 
     @include lgMinBreakPoint {
       font-size: 4.8rem;
