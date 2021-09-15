@@ -19,6 +19,9 @@ function getButtonVariant(variant) {
     case Constants.PRIMARY_VARIANT:
       buttonVariant = styles['btn--primary-variant'];
       break;
+    case Constants.DISABLED:
+      buttonVariant = styles['btn--disabled'];
+      break;
     default:
       buttonVariant = styles.btn;
   }

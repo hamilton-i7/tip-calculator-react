@@ -1,5 +1,7 @@
 @import '../../scss/variables';
 
+$disabled-color: #0d686d;
+
 .btn {
   border: none;
   border-radius: 0.5rem;
@@ -21,10 +23,11 @@
     color: $neutral-color-1;
   }
 
-  &--neutral {
+  &--disabled {
     @extend .btn;
 
-    background-color: $neutral-color-5;
-    color: $neutral-color-2;
+    background-color: $disabled-color;
+    color: $neutral-color-1;
+    cursor: default;
   }
 }

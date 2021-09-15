@@ -30,7 +30,7 @@ const tipButtons = [
 
 function App() {
   const [bill, setBill] = useState('');
-  const [tipPercentage, setTipPercentage] = useState(0);
+  const [tipPercentage, setTipPercentage] = useState('');
   const [peopleAmount, setPeopleAmount] = useState('');
   const [selectedButtonID, setSelectedButtonID] = useState('');
   const [customPercentage, setCustomPercentage] = useState('');
@@ -39,9 +39,11 @@ function App() {
     const currentBill = e.target.value;
     setBill(currentBill);
   };
+
   const peopleAmountHandler = e => {
     setPeopleAmount(e.target.value);
   };
+
   const tipPercentageHandler = button => {
     setTipPercentage(button.percentage);
     setSelectedButtonID(button.id);
@@ -49,6 +51,7 @@ function App() {
     //* Clear custom percentage field if there's a value
     if (customPercentage) setCustomPercentage('');
   };
+
   const customPercentageHandler = e => {
     const currentPercentage = e.target.value;
     setCustomPercentage(currentPercentage);
@@ -56,6 +59,13 @@ function App() {
 
     //* Unselected any percentage button if there's one
     if (currentPercentage) setSelectedButtonID(null);
+  };
+
+  const resetHandler = () => {
+    setBill('');
+    setTipPercentage('');
+    setPeopleAmount('');
+    setSelectedButtonID('');
   };
 
   return (
@@ -78,6 +88,7 @@ function App() {
             bill={bill}
             peopleAmount={peopleAmount}
             percentage={tipPercentage}
+            onReset={resetHandler}
           />
         </Card>
       </main>
