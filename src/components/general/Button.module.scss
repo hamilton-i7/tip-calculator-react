@@ -1,6 +1,7 @@
 @import '../../scss/variables';
 
 $disabled-color: #0d686d;
+$hover-color: #9fe8df;
 
 .btn {
   border: none;
@@ -8,6 +9,14 @@ $disabled-color: #0d686d;
   cursor: pointer;
   outline: none;
   padding: 0.6rem 1.8rem;
+  transition: all 250ms ease;
+  transition-property: background-color, color;
+
+  &:hover,
+  &:active {
+    background-color: $hover-color;
+    color: $neutral-color-1;
+  }
 
   &--primary {
     @extend .btn;
@@ -29,5 +38,11 @@ $disabled-color: #0d686d;
     background-color: $disabled-color;
     color: $neutral-color-1;
     cursor: default;
+
+    &:hover,
+    &:active {
+      background-color: $disabled-color;
+      color: $neutral-color-1;
+    }
   }
 }

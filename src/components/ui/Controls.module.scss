@@ -10,7 +10,8 @@
   }
   &__label {
     color: $neutral-color-2;
-    display: block;
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 0.6rem;
   }
 }
@@ -26,5 +27,14 @@
     @include mdMinBreakPoint {
       grid-template-columns: repeat(3, 1fr);
     }
+
+    @include lgMinBreakPoint {
+      column-gap: 1.4rem;
+      row-gap: 1.6rem;
+    }
   }
+}
+
+.error {
+  color: $error;
 }

@@ -9,12 +9,13 @@ function TextField({
   step = '1',
   placeholder = '',
   lightPlaceholder = true,
+  error = false,
 }) {
   const classes = `${
     iconSrc ? styles.textfield : styles['textfield--no-icon']
   } ${
     lightPlaceholder ? styles['light-placeholder'] : styles['dark-placeholder']
-  } ${className}`;
+  } ${error ? styles.error : ''} ${className}`;
   const input = (
     <input
       type="number"
