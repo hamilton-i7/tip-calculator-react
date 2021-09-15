@@ -18,6 +18,10 @@ $hover-color: #9fe8df;
     color: $neutral-color-1;
   }
 
+  &:focus {
+    border: 0.2rem solid $primary-color-1;
+  }
+
   &--primary {
     @extend .btn;
 
