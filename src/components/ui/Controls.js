@@ -20,7 +20,7 @@ function Controls({
   const errorMessage = <span className={styles.error}>Can't be zero</span>;
 
   return (
-    <section className={styles['controls__container']}>
+    <div className={styles['controls__container']}>
       <label htmlFor="bill" className={styles['controls__label']}>
         Bill
       </label>
@@ -68,7 +68,7 @@ function Controls({
         value={peopleAmount}
         onChange={onPeopleAmountChange}
       />
-    </section>
+    </div>
   );
 }
 

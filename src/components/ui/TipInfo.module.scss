@@ -44,8 +44,9 @@
   &__title {
     color: $neutral-color-6;
 
-    & > div {
+    & > span {
       color: $neutral-color-3;
+      display: block;
       font-size: 1.3rem;
       font-weight: 900;
     }

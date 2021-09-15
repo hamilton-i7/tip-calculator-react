@@ -19,18 +19,18 @@ function TipInfo({ bill, percentage, peopleAmount, onReset }) {
     ? Constants.DISABLED
     : Constants.PRIMARY_VARIANT;
   return (
-    <section className={styles['tip-info__container']}>
+    <div className={styles['tip-info__container']}>
       <div className={styles['amount-info__container']}>
         <h2 className={styles['amount-info__title']}>
           Tip Amount
-          <div>/ person</div>
+          <span>/ person</span>
         </h2>
         <p className={styles['amount-info__amount']}>${tip}</p>
       </div>
       <div className={styles['amount-info__container']}>
         <h2 className={styles['amount-info__title']}>
           Total
-          <div>/ person</div>
+          <span>/ person</span>
         </h2>
         <p className={styles['amount-info__amount']}>${total}</p>
       </div>
@@ -42,7 +42,7 @@ function TipInfo({ bill, percentage, peopleAmount, onReset }) {
           if (buttonVariant !== Constants.DISABLED) onReset();
         }}
       />
-    </section>
+    </div>
   );
 }
 
