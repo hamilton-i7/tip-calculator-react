@@ -69,4 +69,4 @@ Something I'm planning to keep on working is creating more reusable components.
 ## Author
 
 - Github - [Juan Hamilton](https://github.com/hamilton-i7)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/hamilton-i7)
+- Frontend Mentor - [@hamilton-i7](https://www.frontendmentor.io/profile/hamilton-i7)
